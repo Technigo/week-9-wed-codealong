@@ -1,14 +1,52 @@
 .article {
-  background: red;
   position: relative;
+  width: 33.3333%;
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh;
+  padding: 20px;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .article {
+    width: 50%;
+  }
+}
+
+@media (max-width: 668px) {
+  .article {
+    width: 100%;
+    min-height: 100vh;
+  }
 }
 
 .moreDetails {
   display: none;
 }
 
+.moreDetails svg {
+  width: 80px;
+  transition: all 1s ease-in-out;
+}
+
+.moreDetails svg:hover {
+  transform: scale(1.2); 
+}
+
+.moreDetails svg path {
+  fill: red;
+  transition: fill 0.3s ease-in-out;
+}
+
+.moreDetails svg:hover path {
+  fill: white;
+}
+
 .article:hover .moreDetails {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   color: #fff;
   top: 0;
@@ -16,4 +54,5 @@
   bottom: 0;
   left: 0;
   background: rgba(0,0,0,0.5);
+  padding: 20px;
 }
